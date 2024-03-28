@@ -16,10 +16,14 @@ const getDatos = async () => {
 //Función para filtrar y obtener solamente los primeros 20 id de los datos
 const get20Titulos = (datos) => {
   let arrayNuevo = [];
-  datos.map((element) => {
-    element.id <= 20 && arrayNuevo.push(element);
+  datos.slice(0, 20).forEach((element) => {
+    arrayNuevo.push(element);
   });
   console.log(arrayNuevo);
+  /* datos.map((element) => {
+    element.id <= 20 && arrayNuevo.push(element);
+  });
+  console.log(arrayNuevo); */
 };
 
 //Función que retorna una promesa después de 3 segundos
